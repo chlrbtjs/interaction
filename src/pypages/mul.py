@@ -62,7 +62,7 @@ class point:
 
 
 # draw
-def draw():
+def draw(*e):
   canvas.width = canvas.width
   
   for p in points:
