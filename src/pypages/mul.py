@@ -2,7 +2,7 @@ from js import document
 import threading
 from datetime import datetime
 import math
-from pyodide import create_proxy
+from pyodide.ffi import create_proxy
 import random
 
 # js.console.log(1)
