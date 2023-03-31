@@ -99,5 +99,5 @@ document.getElementById('body').addEventListener("mousedown", create_proxy(explo
 def w_draw():
   requestAnimationFrame(create_proxy(draw))
 
-setInterval(w_draw, 10)
+setInterval(create_proxy(w_draw), 10)
 setInterval(create_proxy(explode), 1500)
