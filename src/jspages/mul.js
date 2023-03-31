@@ -99,7 +99,7 @@ const explode = () => {
   });
 }
 
-document.getElementById('body').addEventListener("mouseup", explode);
+document.getElementById('body').addEventListener("mousedown", explode);
 
 setInterval(() => {
   requestAnimationFrame(() => draw())

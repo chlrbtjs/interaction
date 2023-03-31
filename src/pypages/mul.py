@@ -99,7 +99,7 @@ def explode(*e):
     p.set_color("#" + hex(math.floor(random.random()*(0xffffff)))[2:])
 
 
-document.getElementById('body').addEventListener("mouseup", create_proxy(explode))
+document.getElementById('body').addEventListener("mousedown", create_proxy(explode))
 
 js.setInterval(create_proxy(draw), 10)
 js.setInterval(create_proxy(explode), 1500)
