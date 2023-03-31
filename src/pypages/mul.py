@@ -1,14 +1,9 @@
-from js import document
+from js import document, requestAnimationFrame, setInterval
 import threading
 from datetime import datetime
 import math
 from pyodide.ffi import create_proxy
 import random
-
-# js.console.log(1)
-# js.console.dir(js)
-
-# print(document.getElementById('body'))
 
 canvas = document.getElementById("my_canvas")
 context = canvas.getContext("2d")
@@ -101,5 +96,8 @@ def explode(*e):
 
 document.getElementById('body').addEventListener("mousedown", create_proxy(explode))
 
-js.setInterval(create_proxy(draw), 10)
-js.setInterval(create_proxy(explode), 1500)
+def w_draw():
+  requestAnimationFrame(create_proxy(draw))
+
+setInterval(w_draw, 10)
+setInterval(create_proxy(explode), 1500)
