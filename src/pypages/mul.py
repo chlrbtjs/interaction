@@ -33,7 +33,7 @@ class point:
     self.r = 10;    # radius
     self.c = "#000000" # color
 
-    js.setInterval(create_proxy(self.move), 10)
+    setInterval(create_proxy(self.move), 10)
   
 
   def set_acceleration(self, ax, ay):
